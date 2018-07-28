@@ -1,7 +1,9 @@
 
 HandlerConfig.process(new File(modConfigurationDirectory, "/smt/weapon/item/weapon/bullets.tlx"), new HashMap<String, SectionContainer>(), new BulletPC());
 
+
 AND
+
 
 public class BulletPC implements IProcessConfig<BulletDummy> {
 
@@ -33,3 +35,45 @@ public class BulletPC implements IProcessConfig<BulletDummy> {
 	}
 
 }
+
+
+AND
+
+
+[bullet]:exclude
+name		= 
+description	= 
+damage		= 0
+size		= 0.25
+speed		= 2.0
+weight		= 0.03
+effect		= empty
+
+[bullet_test]:bullet
+name = bullet_test_name
+description = bullet_test_desc
+damage = 1
+speed = 1.0
+//weight = 10.0
+
+[bullet_test2]:bullet
+name = bullet_test2_name
+description = bullet_test2_desc
+damage = 5
+speed = 5.0
+
+[flame]:bullet
+name = flame_name
+description = flame_desc
+damage = 1
+size = 1.0
+speed = 0.3
+effect = fire
+
+[blast]:bullet
+name = blast_name
+description = blast_desc
+damage = 1
+size = 0.5
+speed = 1.0
+effect = blast
